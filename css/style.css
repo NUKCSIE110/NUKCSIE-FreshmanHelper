@@ -52,7 +52,7 @@ h5{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.flex-content a, a:link, a:active{
+.flex-content a:link, a:active{
     text-decoration: none;
     text-decoration-color: rgb(109, 109, 109);
     color: rgb(109, 109, 109);
@@ -160,4 +160,13 @@ h5{
 .response img{
     width: 200px;
     margin: 5%;
+}
+#calendar{
+    padding: 5%;
+}
+.fc-next-button::before{
+    content: ">"
+}
+.fc-prev-button::before{
+    content: "<"
 }
