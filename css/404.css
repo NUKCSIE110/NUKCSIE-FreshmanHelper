@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(235, 235, 235);
+    font-family: '微軟正黑體';
+    color: rgb(109, 109, 109);
+}
+.content{
+    width: 30%;
+    margin: 15% auto;
+}
+.content h1{
+    display: block; 
+    width: 80%;
+    float: left;
+    text-align: center;
+    font-size: 30px;
+}
+.content img{
+    width: 20%;
+    display: block;
+    float: left;
+    margin-top: 5%;
+    margin: 0 auto;
+}
