@@ -6,6 +6,11 @@ body{
     color: rgb(109, 109, 109);
     padding-bottom: 5%;
 }
+h1{
+    font-size: 1.5em;
+    margin-top: calc((76px - 1.5em)/2);
+    font-weight: 400;
+}
 h2{
     font-size: 27px;
 }
