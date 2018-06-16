@@ -1,7 +1,20 @@
+var list;
 var data = new XMLHttpRequest();
-data.open('get', '../json/senior.json');
-
-
+data.open('get', 'http://code.csie.nuk.edu.tw/freshman/json/senior.json');
+data.send();
+data.onload = function () {
+    list = JSON.parse(data.responseText);
+}
 function find() {
-    document.querySelector('.response').style.visibility = 'visible';
+    for (let i = 0; i < list.length; i++){
+        let freshman = document.querySelector('#user').value.substr(6);
+        if (list[i].schoolid.substr(6) == freshman) {
+            document.querySelector('.response div h3').textContent = list[i].name ;
+            document.querySelector('.response div a').href = list[i].facebookurl;
+            document.querySelector('.response div a').textContent = list[i].facebookurl;
+            document.querySelector('.response').style.visibility = 'visible';
+            break;
+        }
+        //console.log(list[i].schoolid.substr(6));
+    }
 }
