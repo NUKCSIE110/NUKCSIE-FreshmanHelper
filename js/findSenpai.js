@@ -6,6 +6,7 @@ data.onload = function () {
     list = JSON.parse(data.responseText);
 }
 function find() {
+    let found = false;
     for (let i = 0; i < list.length; i++){
         let freshman = document.querySelector('#user').value.substr(6);
         if (list[i].schoolid.substr(6) == freshman) {
@@ -13,7 +14,14 @@ function find() {
             document.querySelector('.response div a').href = list[i].facebookurl;
             document.querySelector('.response div a').textContent = list[i].facebookurl;
             document.querySelector('.response').style.visibility = 'visible';
+            found = true;
             break;
+        }
+        if (!found) {
+            document.querySelector('.response div h3').textContent = '找不到' ;
+            document.querySelector('.response div a').href = '/404.html';
+            document.querySelector('.response div a').textContent = '404 Not Found';
+            document.querySelector('.response').style.visibility = 'visible';
         }
         //console.log(list[i].schoolid.substr(6));
     }
