@@ -176,3 +176,9 @@ a:hover{
 .fc-prev-button::before{
     content: "<"
 }
+.content{
+    width: 80%;
+    margin: 0 auto;
+    line-height: 2em;
+    padding-top: 3%;
+}
