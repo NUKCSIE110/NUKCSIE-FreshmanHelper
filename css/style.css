@@ -182,3 +182,6 @@ a:hover{
     line-height: 2em;
     padding-top: 3%;
 }
+#map{
+    height: 450px;
+}
