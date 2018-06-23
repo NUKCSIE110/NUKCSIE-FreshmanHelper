@@ -38,10 +38,15 @@ var meal = [
 ];
 
 function find(n) {
+    let flag = 0;
     for (var i = 0; i < meal.length; i++){
         if (meal[i].name == n) {
             document.querySelector('.map').innerHTML = meal[i].map;
+            flag = 1;
             break;
         }
+    }
+    if (flag == 0) {
+        document.querySelector('.map').textContent = "找不到";
     }
 }

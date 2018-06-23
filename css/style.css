@@ -235,3 +235,11 @@ em{
 #map{
     height: 450px;
 }
+@media(max-width:767px){
+    .meal-info table tr td:nth-child(2){
+        display: none;
+}
+.meal-info table tr th:nth-child(2){
+        display: none;
+}
+}
