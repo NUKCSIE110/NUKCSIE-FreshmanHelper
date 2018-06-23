@@ -1,9 +1,10 @@
+
+$(function() {
 var data;
 var xhr = new XMLHttpRequest();
 xhr.open('get', 'http://code.csie.nuk.edu.tw/freshman/json/calendar.json');
 xhr.send();
 
-$(function() {
   xhr.onload = function() {
     data = JSON.parse(xhr.responseText);
     $('#calendar').fullCalendar({
