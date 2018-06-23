@@ -20,7 +20,7 @@ function find() {
         if (!found) {
             document.querySelector('.response div h3').textContent = '找不到' ;
             document.querySelector('.response div a').href = '/404.html';
-            document.querySelector('.response div a').textContent = '404 Not Found';
+            document.querySelector('.response div a').textContent = '測試用學號 A1065501';
             document.querySelector('.response').style.visibility = 'visible';
         }
         //console.log(list[i].schoolid.substr(6));

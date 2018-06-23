@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高大資工新生資訊系統</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/meal.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <style>
+        a{
+            color: rgb(109, 109, 109);
+        }
+    </style>
+</head>
+<body>
+    <a href="/freshman">
+    <div class="nav">
+        <img class="logo" src="logo.png" alt="">
+        <h1>三餐問題</h1>
+    </div>
+    </a>
+    <div class="wrap">
+        <div class="meal-info">
+            <table>
+                <tr>
+                    <th>店名</th>
+                    <th>地址</th>
+                    <th>早餐</th>
+                    <th>中餐</th>
+                    <th>晚餐</th>
+                    <th>地圖</th>
+                </tr>
+                <tr>
+                    <td>美而美</td>
+                    <td>811高雄市楠梓區大學六十街</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>X</td>
+                    <td>
+                        <div class="show-meal-map">
+                            <a onclick="find('美而美')">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>臻品營養飯糰</td>
+                    <td>811高雄市楠梓區大學西路</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>X</td>
+                    <td>
+                        <div class="show-meal-map">
+                            <a onclick="find('臻品營養飯糰')">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>三郎(月底好夥伴)</td>
+                    <td>811高雄市楠梓區大學西路</td>
+                    <td>X</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>
+                        <div class="show-meal-map">
+                            <a onclick="find('三郎(月底好夥伴)')">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>後昌自助餐(唯一信仰)</td>
+                    <td>811高雄市楠梓區藍昌路369號</td>
+                    <td>X</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>
+                        <div class="show-meal-map">
+                            <a onclick="find('後昌自助餐(唯一信仰)')">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>丹丹漢堡-右昌店</td>
+                    <td>811高雄市楠梓區右昌街255號</td>
+                    <td>X</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>
+                        <div class="show-meal-map">
+                            <a onclick="find('丹丹漢堡-右昌店')">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>仙女鮮魚湯</td>
+                    <td>811高雄市楠梓區軍校路1013號</td>
+                    <td>V(很早)</td>
+                    <td>X</td>
+                    <td>V(宵夜)</td>
+                    <td>
+                        <div class="show-meal-map">
+                            <a onclick="find('仙女鮮魚湯')">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>軍校四海豆漿</td>
+                    <td>811高雄市楠梓區萬昌街51-53號</td>
+                    <td>V</td>
+                    <td>X</td>
+                    <td>V</td>
+                    <td>
+                        <div class="show-meal-map">
+                            <a onclick="find('軍校四海豆漿')">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>鮮茶道</td>
+                    <td>811高雄市楠梓區高雄市楠梓區藍昌路398之16號</td>
+                    <td>X</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>
+                        <div class="show-meal-map">
+                            <a onclick="find('鮮茶道')">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>吳家紅茶冰</td>
+                    <td>811高雄市楠梓區藍昌路396號</td>
+                    <td>X</td>
+                    <td>V</td>
+                    <td>V</td>
+                    <td>
+                        <div class="show-meal-map">
+                            <a onclick="find('吳家紅茶冰')">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+        <div class="map">
+            
+        </div>
+    </div>
+</body>
+</html>

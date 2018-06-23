@@ -182,6 +182,52 @@ a:hover{
     line-height: 2em;
     padding-top: 3%;
 }
+
+th, td {
+    padding: 7px 0px;
+}
+.show-meal-map a{
+    display: block;
+    background-color: #43a4ff;
+    border-radius: 10px;
+    color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+    height: 25px;
+    text-align: center;
+}
+.show-meal-map a:hover{
+    background-color: #2395ff;
+
+}
+.meal-info table{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    border-spacing: 0px;
+    
+}
+.meal-info table tr td:nth-child(1){
+    text-align: left;
+    padding-left: 1%;
+}
+.meal-info table tr td:nth-child(2){
+    text-align: left;
+}
+.graduate{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 100%;
+    
+}
+tr:hover{
+    background-color: #e0e0e0;
+    transition: 0.2s;
+}
+em{
+    font-weight: bold;
+}
 #map{
     height: 450px;
 }
