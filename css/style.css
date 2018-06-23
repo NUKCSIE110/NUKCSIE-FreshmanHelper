@@ -221,7 +221,11 @@ th, td {
     width: 100%;
     
 }
-tr:hover{
+.graduate tr:hover{
+    background-color: #e0e0e0;
+    transition: 0.2s;
+}
+.meal-info tr:hover{
     background-color: #e0e0e0;
     transition: 0.2s;
 }
