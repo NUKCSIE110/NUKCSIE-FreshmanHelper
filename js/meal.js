@@ -42,7 +42,8 @@ function find(n) {
     for (var i = 0; i < meal.length; i++){
         if (meal[i].name == n) {
             document.querySelector('.map').innerHTML = meal[i].map;
-            flag = 1;
+            document.querySelector('.eathis').innerHTML = '<tr><td>' + meal[i].name + '</td></tr>';
+	    flag = 1;
             break;
         }
     }
