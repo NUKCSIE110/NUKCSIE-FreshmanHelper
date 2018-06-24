@@ -252,6 +252,8 @@ em{
     cursor: pointer;
     margin: 0 auto;
     z-index: 200;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; 
 }
 .textbox{
     z-index: 200;
@@ -267,10 +269,12 @@ em{
 
 #nameInput{
     width: 100px;
+    height: 30px;
     z-index: 200;
 }
 #messageInput{
     width: 225px;
+    height: 30px;
     z-index: 200;
 }
 .hide-chat{
@@ -278,12 +282,16 @@ em{
     transition: 0.5s;
     z-index: 200;
 }
+.hide-chat h3{
+    margin-left: 8px;
+    text-align: center;
+}
 .hide-chat h3::after{
     transition: 0.5s;
     content: '▲';
 }
 .show-chat{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     transition: 0.5s;
     z-index: 200;
 }
