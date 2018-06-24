@@ -254,7 +254,6 @@ em{
     z-index: 200;
 }
 .textbox{
-    position: fixed;
     z-index: 200;
 }
 #messagesDiv{
@@ -281,7 +280,7 @@ em{
 }
 .hide-chat h3::after{
     transition: 0.5s;
-    content: "⏶";
+    content: '▲';
 }
 .show-chat{
     margin-bottom: 20px;
@@ -290,7 +289,7 @@ em{
 }
 .show-chat h3::after{
     transition: 0.5s;
-    content: "⏷";
+    content: '▼';
 }
 .eatwhat{
     margin: 15px auto;
