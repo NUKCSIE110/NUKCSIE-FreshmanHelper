@@ -1,26 +1,31 @@
 [
     {
         "schoolid": "A1065500",
+        "birth": "870101",
         "name":"無名氏",
         "facebookurl":"https://www.facebook.com"
     },
     {
         "schoolid": "A1065501",
+        "birth": "870101",
         "name":"張O翔",
         "facebookurl":"https://www.facebook.com/"
     },
     {
         "schoolid": "A1065514",
+        "birth": "870101",
         "name":"黃凱崙",
         "facebookurl":"https://www.facebook.com/"
     },
     {
         "schoolid": "A1065515",
+        "birth": "870101",
         "name":"鄭日成",
         "facebookurl":"https://www.facebook.com/"
     },
     {
         "schoolid": "A1065524",
+        "birth": "870101",
         "name":"胡詠翔",
         "facebookurl":"https://www.facebook.com/"
     }

@@ -9,7 +9,8 @@ function find() {
     let found = false;
     for (let i = 0; i < list.length; i++){
         let freshman = document.querySelector('#user').value.substr(6);
-        if (list[i].schoolid.substr(6) == freshman) {
+        let birth = document.querySelector('#date').value;
+        if (list[i].schoolid.substr(6) == freshman && birth ==list[i].birth) {
             document.querySelector('.response div h3').textContent = list[i].name ;
             document.querySelector('.response div a').href = list[i].facebookurl;
             document.querySelector('.response div a').textContent = list[i].facebookurl;
@@ -20,7 +21,7 @@ function find() {
         if (!found) {
             document.querySelector('.response div h3').textContent = '找不到' ;
             document.querySelector('.response div a').href = '/404.html';
-            document.querySelector('.response div a').textContent = '測試用學號 A1065501';
+            document.querySelector('.response div a').textContent = '測試用學號 A1065501 測試用生日870101';
             document.querySelector('.response').style.visibility = 'visible';
         }
         //console.log(list[i].schoolid.substr(6));
