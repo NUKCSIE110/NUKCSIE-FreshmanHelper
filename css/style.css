@@ -255,6 +255,10 @@ em{
     border-top-left-radius: 8px;
     border-top-right-radius: 8px; 
 }
+.chat-header h3{
+    text-align: center;
+    padding-top: 5px;
+}
 .textbox{
     z-index: 200;
 }
@@ -282,10 +286,7 @@ em{
     transition: 0.5s;
     z-index: 200;
 }
-.hide-chat h3{
-    margin-left: 8px;
-    text-align: center;
-}
+
 .hide-chat h3::after{
     transition: 0.5s;
     content: '▲';
