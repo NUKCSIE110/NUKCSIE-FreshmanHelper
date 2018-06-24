@@ -5,6 +5,7 @@ body{
     font-family: '微軟正黑體' !important;
     color: rgb(109, 109, 109);
     padding-bottom: 5%;
+    position: relative;
 }
 h1{
     font-size: 1.5em;
@@ -234,6 +235,78 @@ em{
 }
 #map{
     height: 450px;
+}
+
+.chatroom{
+    width:340px;
+    height: 500px;
+    position: fixed;
+    right: 0px;
+    bottom: -25px;
+    z-index: 200;
+}
+.chat-header{
+    height: 35px;
+    background-color: #2ba0ff;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.textbox{
+    position: fixed;
+}
+#messagesDiv{
+    height: 400px;
+    border:2px solid #2ba0ff;
+    overflow-y: scroll;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+#nameInput{
+    width: 100px;
+    z-index: 200;
+}
+#messageInput{
+    width: 225px;
+    z-index: 200;
+}
+.hide-chat{
+    margin-bottom: -420px;
+    transition: 0.5s;
+}
+.hide-chat h3::after{
+    transition: 0.5s;
+    content: "⏶";
+}
+.show-chat{
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+.show-chat h3::after{
+    transition: 0.5s;
+    content: "⏷";
+}
+.eatwhat{
+    margin: 15px auto;
+    text-align: center;
+}
+.eatwhat a{
+    padding: 3px 30px;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #2ba0ff;
+}
+.eatwhat a:hover{
+    background-color: #0054a3;
+}
+.eatwhat .eathis{
+    margin: 20px auto;
+    font-size: 20px;
+}
+.honio{
+    border: 0px;
 }
 @media(max-width:767px){
     .meal-info table tr td:nth-child(2){

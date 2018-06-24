@@ -50,12 +50,3 @@ function find(n) {
         document.querySelector('.map').textContent = "找不到";
     }
 }
-
-function random() {
-    var n = Math.floor(Math.random() * 9);
-    var restaurant = '';
-    var carry = '';
-    restaurant = '<tr><td>' + meal[n].name + '</td></tr>';
-    document.querySelector('.eathis').innerHTML = restaurant;
-    document.querySelector('.map').innerHTML = meal[n].map;
-}

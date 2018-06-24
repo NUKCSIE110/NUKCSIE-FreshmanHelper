@@ -7,6 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>高大資工新生資訊系統</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.chat-header').click(function () {
+                if ($('.chatroom').hasClass('hide-chat')) {
+                    $('.chatroom').removeClass('hide-chat');
+                    $('.chatroom').addClass('show-chat');
+                }
+                else {
+                    $('.chatroom').addClass('hide-chat');
+                    $('.chatroom').removeClass('show-chat');
+                }
+                //$('#messagesDiv').toggle();
+                //$('#nameInput').toggle();
+                //$('#messageInput').toggle();
+            });
+        });
+
+    </script>
     <style>
         a {
             color: rgb(109, 109, 109);
@@ -21,6 +41,45 @@
             <h1>交通方式</h1>
         </div>
     </a>
+    <div class="chatroom hide-chat">
+        <div class="chat-header"><h3>聊天室</h3></div>
+        <div id='messagesDiv'>
+        </div>
+        <div class="textbox">
+            <input type='text' id='nameInput' placeholder='暱稱'>
+            <input type='text' id='messageInput' placeholder='訊息(按Enter送出)'>
+        </div>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAS7FClisBODADJgCpLSf67P4Wgv3szcTg",
+                authDomain: "chatroom-5b1d0.firebaseapp.com",
+                databaseURL: "https://chatroom-5b1d0.firebaseio.com",
+                projectId: "chatroom-5b1d0",
+                storageBucket: "",
+                messagingSenderId: "336744192990"
+            };
+            firebase.initializeApp(config);
+            var database = firebase.database().ref();
+            //var myDataRef = new firebase('https://chatroom-5b1d0.firebaseio.com');
+            $('#messageInput').keypress(function (e) {
+                if (e.keyCode == 13) {
+                    var name = $('#nameInput').val();
+                    var text = $('#messageInput').val();
+                    database.push({ name: name, text: text });
+                    $('#messageInput').val('');
+                }
+            });
+            database.on('child_added', function (snapshot) {
+                var message = snapshot.val();
+                displayChatMessage(message.name, message.text);
+            });
+            function displayChatMessage(name, text) {
+                $('<div/>').text(text).prepend($('<strong/>').text(name + ': ')).appendTo($('#messagesDiv'));
+                $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+            };
+        </script>
+    </div>
     <div class="wrap">
         <div class="content">
             <p>條條道路通高大，飛機、高鐵、台鐵、捷運、高速公路、客運、公車通通有!與高雄國際機場(小港機場)相距20公里，與南部科學工業園區約距40公里，距高雄港口、高雄小港國際機場及境外航運中心之高雄倉儲轉運區僅約30分鐘以內之車程。

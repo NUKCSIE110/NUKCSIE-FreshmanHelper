@@ -1,0 +1,97 @@
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<script src="js/jQuery.js"></script>
+<style>
+    .chatroom {
+        width: 340px;
+        height: 350px;
+        position: fixed;
+        right: 0px;
+        bottom: 120px;
+    }
+
+    .chat-header {
+        height: 25px;
+        background-color: #2ba0ff;
+        color: #ffffff;
+
+    }
+
+    #messagesDiv {
+        height: 400px;
+        border: 2px solid #2ba0ff;
+        overflow-y: scroll;
+        background-color: #ffffff;
+    }
+
+    #nameInput {
+        width: 100px;
+        z-index: 200;
+    }
+
+    #messageInput {
+        width: 229px;
+        z-index: 200;
+    }
+
+    input {
+        height: 20px;
+        margin-top: 3px;
+    }
+
+    #nameInput {
+        width: 100px;
+        z-index: 200;
+    }
+
+    #messageInput {
+        width: 229px;
+        z-index: 200;
+    }
+</style>
+<div class="chatroom">
+    <div class="chat-header">聊天室</div>
+    <div id='messagesDiv'>
+
+    </div>
+    <input type='text' id='nameInput' placeholder='暱稱'>
+    <input type='text' id='messageInput' placeholder='訊息(按Enter送出)'>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.chat-header').click(function () {
+            $('#messagesDiv').toggle();
+            $('#nameInput').toggle();
+            $('#messageInput').toggle();
+        });
+    });
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAS7FClisBODADJgCpLSf67P4Wgv3szcTg",
+        authDomain: "chatroom-5b1d0.firebaseapp.com",
+        databaseURL: "https://chatroom-5b1d0.firebaseio.com",
+        projectId: "chatroom-5b1d0",
+        storageBucket: "",
+        messagingSenderId: "336744192990"
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database().ref();
+    //var myDataRef = new firebase('https://chatroom-5b1d0.firebaseio.com');
+    $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+            var name = $('#nameInput').val();
+            var text = $('#messageInput').val();
+            database.push({ name: name, text: text });
+            $('#messageInput').val('');
+        }
+    });
+    database.on('child_added', function (snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+    });
+    function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<strong/>').text(name + ': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+    };
+</script>

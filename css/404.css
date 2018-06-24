@@ -21,3 +21,26 @@ body{
     margin-top: 5%;
     margin: 0 auto;
 }
+@media(max-width:767px){
+    .content{
+    width: 80%;
+    margin: 0 auto;
+}
+    .content h1{
+    display: block; 
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+.content h2{
+    font-size: 30px;
+    text-align: center;
+}
+.content img{
+    
+    width: 100%;
+    display: block;
+    margin-top: 5%;
+    margin: 0 auto;
+}
+}

@@ -7,9 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>高大資工新生資訊系統</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/honio.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.chat-header').click(function () {
+                if ($('.chatroom').hasClass('hide-chat')) {
+                    $('.chatroom').removeClass('hide-chat');
+                    $('.chatroom').addClass('show-chat');
+                }
+                else {
+                    $('.chatroom').addClass('hide-chat');
+                    $('.chatroom').removeClass('show-chat');
+                }
+                //$('#messagesDiv').toggle();
+                //$('#nameInput').toggle();
+                //$('#messageInput').toggle();
+            });
+        });
+
+    </script>
     <style>
-        a{
+        a {
             color: rgb(109, 109, 109);
         }
     </style>
@@ -23,6 +43,46 @@
         </div>
     </a>
     <div class="clear"></div>
+    <div class="chatroom hide-chat">
+        <div class="chat-header"><h3>聊天室</h3></div>
+        <div id='messagesDiv'>
+        </div>
+        <div class="textbox">
+            <input type='text' id='nameInput' placeholder='暱稱'>
+            <input type='text' id='messageInput' placeholder='訊息(按Enter送出)'>
+        </div>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAS7FClisBODADJgCpLSf67P4Wgv3szcTg",
+                authDomain: "chatroom-5b1d0.firebaseapp.com",
+                databaseURL: "https://chatroom-5b1d0.firebaseio.com",
+                projectId: "chatroom-5b1d0",
+                storageBucket: "",
+                messagingSenderId: "336744192990"
+            };
+            firebase.initializeApp(config);
+            var database = firebase.database().ref();
+            //var myDataRef = new firebase('https://chatroom-5b1d0.firebaseio.com');
+            $('#messageInput').keypress(function (e) {
+                if (e.keyCode == 13) {
+                    var name = $('#nameInput').val();
+                    var text = $('#messageInput').val();
+                    database.push({ name: name, text: text });
+                    $('#messageInput').val('');
+                }
+            });
+            database.on('child_added', function (snapshot) {
+                var message = snapshot.val();
+                displayChatMessage(message.name, message.text);
+            });
+            function displayChatMessage(name, text) {
+                $('<div/>').text(text).prepend($('<strong/>').text(name + ': ')).appendTo($('#messagesDiv'));
+                $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+            };
+        </script>
+    </div>
+
 
     <div class="wrap">
         <div class="flex-content">
@@ -121,72 +181,11 @@
                 </div>
             </a>
         </div>
-	<!-- Source:https://codepen.io/finnhvman/pen/gzmMaa -->
-        <div class="honio">
-
-            <form>
-                <div class="discs">
-                    <input id="one" type="text" tabindex="-1" readonly>
-                    <input name="one" type="radio" tabindex="-1" checked>
-                    <input name="one" type="radio" tabindex="-1">
-                    <input name="one" type="radio" tabindex="-1">
-                    <label for="one"></label>
-                    <div class="disc one"></div>
-
-                    <input id="two" type="text" tabindex="-1" readonly>
-                    <input name="two" type="radio" tabindex="-1" checked>
-                    <input name="two" type="radio" tabindex="-1">
-                    <input name="two" type="radio" tabindex="-1">
-                    <label for="two"></label>
-                    <div class="disc two"></div>
-
-                    <input id="three" type="text" tabindex="-1" readonly>
-                    <input name="three" type="radio" tabindex="-1" checked>
-                    <input name="three" type="radio" tabindex="-1">
-                    <input name="three" type="radio" tabindex="-1">
-                    <label for="three"></label>
-                    <div class="disc three"></div>
-
-                    <input id="four" type="text" tabindex="-1" readonly>
-                    <input name="four" type="radio" tabindex="-1" checked>
-                    <input name="four" type="radio" tabindex="-1">
-                    <input name="four" type="radio" tabindex="-1">
-                    <label for="four"></label>
-                    <div class="disc four"></div>
-
-                    <input id="five" type="text" tabindex="-1" readonly>
-                    <input name="five" type="radio" tabindex="-1" checked>
-                    <input name="five" type="radio" tabindex="-1">
-                    <input name="five" type="radio" tabindex="-1">
-                    <label for="five"></label>
-                    <div class="disc five"></div>
-
-                    <input id="six" type="text" tabindex="-1" readonly>
-                    <input name="six" type="radio" tabindex="-1" checked>
-                    <input name="six" type="radio" tabindex="-1">
-                    <input name="six" type="radio" tabindex="-1">
-                    <label for="six"></label>
-                    <div class="disc six"></div>
-
-                    <input id="zero" type="text" tabindex="-1" readonly>
-
-                    <div class="spacer a"></div>
-                    <div class="separator ab"></div>
-                    <div class="spacer b"></div>
-                    <div class="separator bc"></div>
-                    <div class="spacer c"></div>
-
-                    <div class="tower a"></div>
-                    <div class="tower b"></div>
-                    <div class="tower c"></div>
-
-                    <div class="win">You win! :)</div>
-                </div>
-                <div class="bottom"></div>
-                <button type="reset">New Game</button>
-            </form>
-        </div>
+        <!-- Source:https://codepen.io/finnhvman/pen/gzmMaa -->
+        <iframe class="honio" width="100%" height="600px" src="./honio.html"></iframe>
     </div>
+
+
 </body>
 
 </html>
