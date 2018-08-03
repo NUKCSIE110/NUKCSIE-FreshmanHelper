@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高大資工新生資訊系統</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script>
+            $(document).ready(function () {
+                $('.chat-header').click(function () {
+                    if ($('.chatroom').hasClass('hide-chat')) {
+                        $('.chatroom').removeClass('hide-chat');
+                        $('.chatroom').addClass('show-chat');
+                    }
+                    else {
+                        $('.chatroom').addClass('hide-chat');
+                        $('.chatroom').removeClass('show-chat');
+                    }
+                    //$('#messagesDiv').toggle();
+                    //$('#nameInput').toggle();
+                    //$('#messageInput').toggle();
+                });
+            });
+    
+        </script>
+    <style>
+        a{
+            color: rgb(109, 109, 109);
+        }
+    </style>
+</head>
+<body>
+        <div class="chatroom hide-chat">
+                <div class="chat-header"><h3>聊天室</h3></div>
+                <div id="messagesDiv">Loading...<div><strong>rgerg: </strong>ger</div><div><strong>rgerg: </strong>g</div><div><strong>rgerg: </strong>er</div><div><strong>rgerg: </strong>ge</div><div><strong>rgerg: </strong>rg</div><div><strong>rtg: </strong>rtgrt</div><div><strong>thyyth: </strong>tyhty</div><div><strong>thyyth: </strong>thtyh</div><div><strong>kyuuk: </strong>uykyuk</div><div><strong>thyyth: </strong>gfdh</div><div><strong>grsed: </strong>rdsgd</div><div><strong>BR: </strong>哭哭</div><div><strong>KB: </strong>==</div><div><strong>yee: </strong>這樣也太亂= =</div><div><strong>集集: </strong>副集集</div><div><strong>LuLaLa: </strong> BaNa</div><div><strong>吃五根: </strong>香蕉</div><div><strong>憶起吃: </strong>大便</div><div><strong>Kix: </strong>花惹發</div><div><strong>Kix: </strong>哭哭</div><div><strong>Kix: </strong>不見了</div><div><strong>Kix: </strong>好想吃仙女</div><div><strong>Kix: </strong>不過上次吃完大爆拉</div><div><strong>Kix: </strong>嘿嘿</div><div><strong>測試: </strong>還活著</div><div><strong>Kix: </strong>好爽</div><div><strong>圖好看: </strong>這個圖都是在哪裡抓的阿?</div><div><strong>Bot: </strong>https://www.flaticon.com/</div><div><strong>Bot: </strong>部分是PS合成的</div><div><strong>抓漏達人: </strong>來找bug瞜</div><div><strong>找bug可以: </strong>但可以先交作業嗎? 我也想找bug</div><div><strong>河內塔: </strong>河內塔塔塔塔塔塔</div><div><strong>嗨: </strong>嗨嗨嗨嗨嗨</div><div><strong>QQ: </strong>Q</div><div><strong>0 0 : </strong>hi</div><div><strong>Bot: </strong>HI</div><div><strong>212: </strong>好睡</div><div><strong>hbjk: </strong>gn</div><div><strong>ewrtj: </strong>dfgh</div><div><strong>ewrtj: </strong>trtn</div><div><strong>ewrtj: </strong>rtr</div><div><strong>ewrtj: </strong>trt</div><div><strong>ewrtj: </strong>rt</div><div><strong>ewrtj: </strong>rt</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>rt</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>tr</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>trtrt</div><div><strong>高大村的大傻子: </strong>發我發現我破不了河內塔</div><div><strong>高大村的二傻子: </strong>樓上比猩球崛起的猴子還低能</div><div><strong>test: </strong>jrjfi</div><div><strong>123: </strong>123</div><div><strong>admin: </strong>hi</div><div><strong>123: </strong>123</div><div><strong>: </strong>33</div><div><strong>: </strong>3====D</div><div><strong>: </strong>()8=====D</div><div><strong>: </strong>3O=====D</div><div><strong>ㄠ: </strong>ㄘ</div><div><strong>哈哈哈: </strong>哈哈哈</div><div><strong>ff: </strong>ffffffffffff</div><div><strong>hi: </strong>123</div><div><strong>hello: </strong>1234</div><div><strong>高大村的二傻子: </strong>1</div><div><strong>&lt;a href="#"&gt;哈&lt;/a&gt;: </strong>123</div></div>
+                <div class="textbox">
+                    <input type="text" id="nameInput" placeholder="暱稱">
+                    <input type="text" id="messageInput" placeholder="訊息(按Enter送出)">
+                </div>
+                <script>
+                    // Initialize Firebase
+                    var config = {
+                        apiKey: "AIzaSyAS7FClisBODADJgCpLSf67P4Wgv3szcTg",
+                        authDomain: "chatroom-5b1d0.firebaseapp.com",
+                        databaseURL: "https://chatroom-5b1d0.firebaseio.com",
+                        projectId: "chatroom-5b1d0",
+                        storageBucket: "",
+                        messagingSenderId: "336744192990"
+                    };
+                    firebase.initializeApp(config);
+                    var database = firebase.database().ref();
+                    //var myDataRef = new firebase('https://chatroom-5b1d0.firebaseio.com');
+                    $('#messageInput').keypress(function (e) {
+                        if (e.keyCode == 13) {
+                            var name = $('#nameInput').val();
+                            var text = $('#messageInput').val();
+                            database.push({ name: name, text: text });
+                            $('#messageInput').val('');
+                        }
+                    });
+                    database.on('child_added', function (snapshot) {
+                        var message = snapshot.val();
+                        displayChatMessage(message.name, message.text);
+                    });
+                    function displayChatMessage(name, text) {
+                        $('<div/>').text(text).prepend($('<strong/>').text(name + ': ')).appendTo($('#messagesDiv'));
+                        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+                    };
+                </script>
+            </div>
+    <a href="/freshman">
+    <div class="nav">
+        <img class="logo" src="logo.png" alt="">
+        <h1>資工系隊</h1>
+    </div>
+    </a>
+    <div class="wrap"> 
+        <div class="content">
+            <h2>就是系隊宣傳</h2>
+            <div class="team">
+                <ul>
+                    <li><a href="#volleyball" onclick="">高大資工系排</a></li>
+                    <li><a href="#badminton" onclick="">高大資工系羽</a></li>
+                    <li><a href="#softball" onclick="">高大資工系壘</a></li>
+                    <li><a href="#basketball" onclick="">高大資工系籃</a></li>
+                    <li><a href="#tabletennis" onclick="">高大資工系桌</a></li>
+                </ul>
+
+                <div class="volleyball">
+                    <div class="LinkSpace"><a name="volleyball"></a></div>
+                    <h2>高大資工系排</h2>
+                    <img src="img/volleyball.png" alt="2016南資盃" width="80%">
+                    <p>
+                        想要體驗在空中飛翔的快感嗎？<br>
+                        想要學習在地上翻滾的樂趣嗎？<br>
+                        想要在大學留下熱血的時刻嗎？<br>
+                        想要的話……..就加入系排吧！！<br>
+                        我把所有的歡樂都放在那裡了！<br>
+                        讓我們一起在球場上燃燒屬於自己的排球魂吧！！<br>
+                        歡迎各個對排球有興趣的學弟妹一同來參與！<br>
+                        如果有任何問題都歡迎直接詢問學長姐喔！<br>
+                        FB搜尋＂高大資工歡樂系排＂也能找到我們喔！</p>
+                    
+                    <h3>系排隊長：資工109級 黃冠淇，FB：黃冠淇</h3>
+                </div>
+                <div class="badminton">
+                    <div class="LinkSpace"><a name="badminton"></a></div>
+                    <h2>高大資工系羽</h2>
+                    <img src="img/badminton.jpg" alt="106羽球系抗" width="80%">
+                    <p>
+                        想要在場上擊出時速300的殺球嗎？<br>
+                        想要與夥伴一起享受贏球的快感嗎？<br>
+                        想要運動卻又害怕被大太陽曬傷嗎？<br>
+                        加入系羽吧！<br>
+                        在球場上揮灑青春的汗水！<br>
+                        歡迎喜歡羽球的學弟妹們！<br>
+                        有任何疑問請洽詢學長姐哦！<br>
+                        FB搜尋＂高大資工CSIE-系羽＂，快來加入吧！</p>
+
+                    <h3>系羽隊長：資工110級 翁晟洋，FB：翁晟洋</h3>
+                </div>
+                <div class="softball">
+                    <div class="LinkSpace"><a name="softball"></a></div>
+                    <h2>高大資工系壘</h2>
+                    <img src="img/softball.jpg" alt="106系壘OB賽" width="80%">
+                    <p>
+                        你想要在球場上演出精彩的Nice Play嗎？<br>
+                        你想要在打擊區上一棒擊沉對手嗎？<br>
+                        你想要在外野疾步演出美技接殺嗎？<br>
+                        加入系壘就對了！！隊員、經理強力招募中！！<br>
+                        也歡迎有興趣的學妹來打球或當經理，<br>
+                        系壘隊經理會提供聚餐的補助等等的福利，來就對了！！<br>
+                        歡迎有興趣的學弟妹到資工系壘FB社團逛逛。<br>
+                        FB搜尋”高大資工系壘”<br>
+                        也可以加學長姐的FB詢問喔！
+                    </p>
+                    
+                    <h3>系壘隊長：資工109級 吳凱倫，FB：吳凱倫</h3>
+                    
+                </div>
+                <div class="basketball">
+                    <div class="LinkSpace"><a name="basketball"></a></div>
+                    <h2>高大資工系籃</h2>
+                    <img src="img/basketball.png" alt="104籃球系抗" width="80%">
+                    
+                    <p>                    
+                        想擁有像Curry一樣的外線？<br>
+                        或是像Lebron一樣的切入？<br>
+                        亦或是像Irving一樣的運球？<br>
+                        加入系籃是你唯一的選擇！<br>
+                        快來吧！帥氣的學長與美麗的學姊等著你！<br>
+
+                        FB快快搜尋↓↓↓↓↓↓↓<br>
+                        ＂高大資工CSIE系籃之灌籃高手”
+                    </p>
+                    <h3>系籃隊長：資工109級 吳亮躍，FB：吳亮躍</h3>
+                </div>
+                <div class="tabletennis">
+                    <div class="LinkSpace"><a name="tabletennis"></a></div>
+                    <h2>高大資工系桌</h2>
+                    <img src="img/tabletennis.png" alt="截圖取自網路" width="80%">
+                    <p>
+                        想追求運動的快感，<br>
+                        想體驗汗水的痛快，<br>
+                        卻擔心被高雄毒辣的太陽曬到頭暈脫皮嗎？<br>
+                        來打桌球吧！！<br>
+                        既不用擔心日曬雨淋，<br>
+                        也不必活在被球砸到的恐懼裡。<br>
+                        讓我們一起往高手之路邁進！
+                    </p>
+                    <h3>負責人：資工110級 翁晟洋，FB：翁晟洋</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

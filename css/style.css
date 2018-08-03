@@ -54,6 +54,10 @@ a:hover{
     background-color: #ffffff;
     padding-bottom: 3%;
 }
+.wrap-nocolor{
+    max-width: 1080px;
+    margin: 0 auto;
+}
 .flex-content{
     display: flex;
     flex-wrap: wrap;
@@ -323,6 +327,19 @@ em{
 .honio{
     border: 0px;
 }
+.footer p{
+    text-align: center;
+}
+.team ul li a{
+    text-decoration: none;
+    color: #0054a3;
+}
+.team ul li a:hover{
+    text-decoration: none;
+    color: #2ba0ff;
+    transition: 0.5s;
+}
+
 @media(max-width:767px){
     .meal-info table tr td:nth-child(2){
         display: none;
