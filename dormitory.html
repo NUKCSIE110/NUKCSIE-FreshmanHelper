@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高大資工新生資訊系統</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script>
+            $(document).ready(function () {
+                $('.chat-header').click(function () {
+                    if ($('.chatroom').hasClass('hide-chat')) {
+                        $('.chatroom').removeClass('hide-chat');
+                        $('.chatroom').addClass('show-chat');
+                    }
+                    else {
+                        $('.chatroom').addClass('hide-chat');
+                        $('.chatroom').removeClass('show-chat');
+                    }
+                    //$('#messagesDiv').toggle();
+                    //$('#nameInput').toggle();
+                    //$('#messageInput').toggle();
+                });
+            });
+    
+        </script>
+    <style>
+        a{
+            color: rgb(109, 109, 109);
+        }
+    </style>
+</head>
+<body>
+    <div class="chatroom hide-chat">
+        <div class="chat-header"><h3>聊天室</h3></div>
+        <div id="messagesDiv">Loading...<div><strong>rgerg: </strong>ger</div><div><strong>rgerg: </strong>g</div><div><strong>rgerg: </strong>er</div><div><strong>rgerg: </strong>ge</div><div><strong>rgerg: </strong>rg</div><div><strong>rtg: </strong>rtgrt</div><div><strong>thyyth: </strong>tyhty</div><div><strong>thyyth: </strong>thtyh</div><div><strong>kyuuk: </strong>uykyuk</div><div><strong>thyyth: </strong>gfdh</div><div><strong>grsed: </strong>rdsgd</div><div><strong>BR: </strong>哭哭</div><div><strong>KB: </strong>==</div><div><strong>yee: </strong>這樣也太亂= =</div><div><strong>集集: </strong>副集集</div><div><strong>LuLaLa: </strong> BaNa</div><div><strong>吃五根: </strong>香蕉</div><div><strong>憶起吃: </strong>大便</div><div><strong>Kix: </strong>花惹發</div><div><strong>Kix: </strong>哭哭</div><div><strong>Kix: </strong>不見了</div><div><strong>Kix: </strong>好想吃仙女</div><div><strong>Kix: </strong>不過上次吃完大爆拉</div><div><strong>Kix: </strong>嘿嘿</div><div><strong>測試: </strong>還活著</div><div><strong>Kix: </strong>好爽</div><div><strong>圖好看: </strong>這個圖都是在哪裡抓的阿?</div><div><strong>Bot: </strong>https://www.flaticon.com/</div><div><strong>Bot: </strong>部分是PS合成的</div><div><strong>抓漏達人: </strong>來找bug瞜</div><div><strong>找bug可以: </strong>但可以先交作業嗎? 我也想找bug</div><div><strong>河內塔: </strong>河內塔塔塔塔塔塔</div><div><strong>嗨: </strong>嗨嗨嗨嗨嗨</div><div><strong>QQ: </strong>Q</div><div><strong>0 0 : </strong>hi</div><div><strong>Bot: </strong>HI</div><div><strong>212: </strong>好睡</div><div><strong>hbjk: </strong>gn</div><div><strong>ewrtj: </strong>dfgh</div><div><strong>ewrtj: </strong>trtn</div><div><strong>ewrtj: </strong>rtr</div><div><strong>ewrtj: </strong>trt</div><div><strong>ewrtj: </strong>rt</div><div><strong>ewrtj: </strong>rt</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>rt</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>tr</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>trtrt</div><div><strong>高大村的大傻子: </strong>發我發現我破不了河內塔</div><div><strong>高大村的二傻子: </strong>樓上比猩球崛起的猴子還低能</div><div><strong>test: </strong>jrjfi</div><div><strong>123: </strong>123</div><div><strong>admin: </strong>hi</div><div><strong>123: </strong>123</div><div><strong>: </strong>33</div><div><strong>: </strong>3====D</div><div><strong>: </strong>()8=====D</div><div><strong>: </strong>3O=====D</div><div><strong>ㄠ: </strong>ㄘ</div><div><strong>哈哈哈: </strong>哈哈哈</div><div><strong>ff: </strong>ffffffffffff</div><div><strong>hi: </strong>123</div><div><strong>hello: </strong>1234</div><div><strong>高大村的二傻子: </strong>1</div><div><strong>&lt;a href="#"&gt;哈&lt;/a&gt;: </strong>123</div></div>
+        <div class="textbox">
+            <input type="text" id="nameInput" placeholder="暱稱">
+            <input type="text" id="messageInput" placeholder="訊息(按Enter送出)">
+        </div>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAS7FClisBODADJgCpLSf67P4Wgv3szcTg",
+                authDomain: "chatroom-5b1d0.firebaseapp.com",
+                databaseURL: "https://chatroom-5b1d0.firebaseio.com",
+                projectId: "chatroom-5b1d0",
+                storageBucket: "",
+                messagingSenderId: "336744192990"
+            };
+            firebase.initializeApp(config);
+            var database = firebase.database().ref();
+            //var myDataRef = new firebase('https://chatroom-5b1d0.firebaseio.com');
+            $('#messageInput').keypress(function (e) {
+                if (e.keyCode == 13) {
+                    var name = $('#nameInput').val();
+                    var text = $('#messageInput').val();
+                    database.push({ name: name, text: text });
+                    $('#messageInput').val('');
+                }
+            });
+            database.on('child_added', function (snapshot) {
+                var message = snapshot.val();
+                displayChatMessage(message.name, message.text);
+            });
+            function displayChatMessage(name, text) {
+                $('<div/>').text(text).prepend($('<strong/>').text(name + ': ')).appendTo($('#messagesDiv'));
+                $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+            };
+        </script>
+    </div>
+    <a href="/">
+    <div class="nav">
+        <img class="logo" src="logo.png" alt="">
+        <h1>宿舍入住</h1>
+    </div>
+    </a>
+    <div class="wrap">
+        <div class="content">
+        <div class="Dormitory">
+            <div class="DormitoryList">
+                <ul>
+                    <li><a href="#ApplyBed"><h3>申請宿舍</h3></a></li>
+                    <li><a href="#MoveIn"><h3>進住宿舍</h3></a></li>
+                    <li><a href="#drill"><h3>防災演練</h3></a></li>
+                    <li><a href="#bring"><h3>宿舍用品</h3></a></li>
+                </ul>
+            </div>
+            <div class="ApplyBed"><a name="AppleBed"></a>
+                <h2>申請宿舍</h2>
+                <h3>107.08.11(六)-107.08.17(五)</h3>
+                <p>進入<a href="https://stu.nuk.edu.tw/start/login.asp"><b>學務管理系統</b></a>以學號及身分證字號(皆為小寫)登入，再點選「學生住宿管理系統」。</p>
+                <p>輸入學號後按新增，按了一堆同意後輸入資料，接著按儲存。</p>
+                <p>這邊可以選取申請宿舍的棟別，學二最新且環境隔音較佳，但較貴；綜宿除環境最差，選了要做好心理準備。另外如果不能選取代表該棟別已滿，選其他的吧。</p>
+                <p>最後按上方的查詢，確認資料有成功儲存後再離開頁面，查詢宿舍分發結果也是以這個頁面查詢。</p>
+            </div>
+            <div class="MoveIn"><a name="MoveIn"></a>
+                <h2>進住宿舍</h2>
+                <h3>107.09.08(六)09：00 ~ 17：00「學生第一、二宿舍新生進住」</h3>
+                <h3>107.09.09(日)09：00 ~ 15：00「綜合第一大樓宿舍新生進住」</h3>
+                <h5>若遇颱風延後至107 .09 .10(一)09:00~21:00</h5>
+                <p>新生進住報到處：<br>
+                    1.107.09.08(六)：中央廣場地下停車場<br>
+                    2.107.09.09(日)：綜合大樓106教室</p>
+                <p><b>報到流程</b><br>
+                    檢查身分證件<br>
+                        繳交資料：「入帳申請表及個人銀行（或郵局）帳號影本」(學務管理系統→學生入帳申請系統)<br>
+                        領取學生證及鑰匙<br>
+                        新生住宿包裹領取<br>
+                        請註明「學生姓名、系級、寢室號碼、學生第一宿舍(或學生第二宿舍、綜合第一大樓宿舍)收」等字樣，並於 107年9月7日(五)寄到即可，宿舍空間有限，請勿提早寄達。<br>
+                            9/8-9/9包裹領取地點：學生第二宿舍一樓閱覽室。<br>
+                            9/10後包裹領取地點：學生第二宿舍地下室E-B101。</p>
+                <p>到校記得要先去報到拿鑰匙跟學生證，繳交入帳申請表及個人銀行帳號影本，再去搬宿舍。</p>
+                <p><b>前往學生第一、第二宿舍路線</b><br> 進住路線：校門→(左轉)群賢路→(右轉)勵學路→(右轉)勤樸路→(右轉)學生第一宿舍、學生第二宿舍<br>離開路線...隨你高興吧</p>
+                <img src="dorm01.png" alt="">
+                <p><b>前往綜合宿舍路線</b><br>進住路線：校門→（左轉）群賢路→（左轉）綜合第一大樓<br>離開路線...可以繞一圈校園認識一下環境啊</p>
+                <img src="dorm02.png" alt="">
+                
+            </div>
+            <div class="drill"><a name="drill"></a>
+                <h2>防災演練</h2>
+                <h3>107.09.12 (三) 晚上 18:30 ~21:00</h3>
+                <p>時間空出來，記一下自己是幾房的，然後等廣播</p>
+            </div>
+            <div class="bring"><a name="bring"></a>
+                <h2>宿舍用品</h2>
+                <h3>Ask Your Mom TA-DA</h3>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

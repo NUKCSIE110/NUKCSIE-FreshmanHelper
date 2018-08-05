@@ -339,7 +339,30 @@ em{
     color: #2ba0ff;
     transition: 0.5s;
 }
+.team ul , .DormitoryList ul{
+    text-align: center;
+    padding-left: -40px;
+}
+.team ul li , .DormitoryList ul li{
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 2px 2px;
+    font-size: 20px;
+}
+.team img{
+    width: 80%;
+}
+.team .LinkSpace{
+    margin-top: 50px;
+}
 
+.Dormitory a:hover{
+    color:#2395ff;
+    transition: 0.2s;
+}
+.Dormitory img{
+    width: 80%;
+}
 @media(max-width:767px){
     .meal-info table tr td:nth-child(2){
         display: none;
