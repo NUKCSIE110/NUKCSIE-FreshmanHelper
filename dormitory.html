@@ -26,8 +26,11 @@
             });
     
         </script>
+        <script src="js/Bring.js"></script>
     <style>
-        
+        a{
+            color: rgb(109, 109, 109);
+        }
     </style>
 </head>
 <body>
@@ -80,10 +83,10 @@
         <div class="Dormitory">
             <div class="DormitoryList">
                 <ul>
-                    <li><a class="light-blue-link" href="#ApplyBed"><h3>申請宿舍</h3></a></li>
-                    <li><a class="light-blue-link" href="#MoveIn"><h3>進住宿舍</h3></a></li>
-                    <li><a class="light-blue-link" href="#drill"><h3>防災演練</h3></a></li>
-                    <li><a class="light-blue-link" href="#bring"><h3>宿舍用品</h3></a></li>
+                    <li><a href="#ApplyBed"><h3>申請宿舍</h3></a></li>
+                    <li><a href="#MoveIn"><h3>進住宿舍</h3></a></li>
+                    <li><a href="#drill"><h3>防災演練</h3></a></li>
+                    <li><a href="#bring"><h3>宿舍用品</h3></a></li>
                 </ul>
             </div>
             <div class="ApplyBed"><a name="AppleBed"></a>
@@ -93,6 +96,81 @@
                 <p>輸入學號後按新增，按了一堆同意後輸入資料，接著按儲存。</p>
                 <p>這邊可以選取申請宿舍的棟別，學二最新且環境隔音較佳，但較貴；綜宿除環境最差，選了要做好心理準備。另外如果不能選取代表該棟別已滿，選其他的吧。</p>
                 <p>最後按上方的查詢，確認資料有成功儲存後再離開頁面，查詢宿舍分發結果也是以這個頁面查詢。</p>
+                <h3>宿舍比較</h3>
+                <table class="graduate" border= "1" style="text-align: center;">
+                    <tr>
+                        <th></th>
+                        <th>學一</th>
+                        <th>學二</th>
+                        <th>綜宿</th>
+                    </tr>
+                    <tr>
+                        <td>室內空間</td>
+                        <td>大</td>
+                        <td>中</td>
+                        <td>小</td>
+                    </tr>
+                    <tr>
+                        <td>浴室</td>
+                        <td>一馬桶一浴室</td>
+                        <td>兩馬桶一浴室</td>
+                        <td>一馬桶一浴室</td>
+                    </tr>
+                    <tr>
+                        <td>床</td>
+                        <td>爬梯式</td>
+                        <td> 階梯式</td>
+                        <td>爬梯式</td>
+                    </tr>
+                    <tr>
+                        <td>老舊</td>
+                        <td>中</td>
+                        <td>新</td>
+                        <td>舊</td>
+                    </tr>
+                    <tr>
+                        <td>內配</td>
+                        <td>基本家具+鐵櫃</td>
+                        <td>基本家具白色木製</td>
+                        <td>基本家具鐵製無陽台</td>
+                    </tr>
+                    <tr>
+                        <td>隔音</td>
+                        <td>普通</td>
+                        <td>佳</td>
+                        <td>爛</td>
+                    </tr>
+                    <tr>
+                        <td>通風</td>
+                        <td>佳</td>
+                        <td>佳</td>
+                        <td>差</td>
+                    </tr>
+                    <tr>
+                        <td>公共空間</td>
+                        <td>1個交誼廳</td>
+                        <td>10個交誼廳+K中+一樓大廳+宿舍辦公室</td>
+                        <td>每樓1個交誼廳</td>
+                    </tr>
+                    <tr>
+                        <td>電信訊號</td>
+                        <td>尚可</td>
+                        <td>免強</td>
+                        <td>較好</td>
+                    </tr>
+                    <tr>
+                        <td>費用</td>
+                        <td>7550</td>
+                        <td>9800</td>
+                        <td>7250</td>
+                    </tr>
+                    <tr>
+                        <td>照片</td>
+                        <td><img src="photo1.png" alt=""></td>
+                        <td><img src="photo2.png" alt=""></td>
+                        <td><img src="photo3.png" alt=""></td>
+                    </tr>
+                    </table>
             </div>
             <div class="MoveIn"><a name="MoveIn"></a>
                 <h2>進住宿舍</h2>
@@ -125,83 +203,159 @@
             <div class="bring"><a name="bring"></a>
                 <h2>宿舍用品</h2>
                 <h3>Ask Your Mom TA-DA</h3>
+                <div class="BoyBring">
+                    <h3 class="btnBoy"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 351.778 351.778" style="enable-background:new 0 0 351.778 351.778;" xml:space="preserve" width="6%">
+                        <path d="M321.778,95.024l30-0.049l-0.154-94.821L256.802,0l-0.049,30l43.741,0.071l-58.583,58.583  c-26.385-21.595-59.13-33.339-93.68-33.339c-39.594,0-76.817,15.419-104.814,43.417C15.419,126.729,0,163.953,0,203.547  s15.419,76.818,43.416,104.815s65.221,43.416,104.814,43.416s76.818-15.419,104.815-43.416  c54.215-54.215,57.572-140.324,10.073-198.49l58.588-58.588L321.778,95.024z M231.833,287.149  c-22.331,22.331-52.021,34.629-83.603,34.629S86.96,309.48,64.629,287.149C42.298,264.818,30,235.128,30,203.547  s12.298-61.271,34.629-83.602s52.021-34.629,83.602-34.629c31.581,0,61.271,12.298,83.603,34.629  C277.931,166.044,277.931,241.051,231.833,287.149z" fill="#006DF0"/></svg>
+                        &nbsp男</h3>
+                    <ul class="toggleBoy" style="list-style: none;margin-left: -9%;">
+                        <li>日常生活</li>
+                        <ul>
+                            <li><label><input type="checkbox">泡麵碗</label></li>
+                            <li><input type="checkbox">拖鞋</li>
+                            <li><input type="checkbox">洗衣袋</li>
+                            <li><input type="checkbox">洗衣籃</li>
+                            <li><input type="checkbox">垃圾桶</li>
+                            <li><input type="checkbox">一個耐背的背包</li>
+                            <li><input type="checkbox">衣物</li>
+                            <li><input type="checkbox">臉盆</li>
+                            <li><input type="checkbox">水壺</li>
+                            <li><input type="checkbox">電風扇</li>
+                            <li><input type="checkbox">想不出來</li>
+                        </ul>
+                        <li>文書(讀書)用具</li>
+                        <ul>
+                            <li><input type="checkbox">膠帶、膠水</li>
+                            <li><input type="checkbox">剪刀、美工刀</li>
+                            <li><input type="checkbox">各種筆</li>
+                            <li><input type="checkbox">一疊A4(較推)或是一本計算紙(微積分和離散數學會用到)</li>
+                            <li><input type="checkbox">筆記本</li>
+                            <li><input type="checkbox">想不出來part2</li>
+                        </ul>
+                        <li>盥洗用具</li>
+                        <ul>
+                            <li><input type="checkbox">吹風機</li>
+                            <li><input type="checkbox">三合一沐浴乳(就是要簡單)</li>
+                            <li><input type="checkbox">牙刷牙膏漱口杯</li>
+                            <li><input type="checkbox">毛巾、浴巾</li>
+                        </ul>
+                        <li>3C用品</li>
+                        <ul>
+                            <li><input type="checkbox">筆電或桌電</li>
+                            <li><input type="checkbox">筆電的充電器</li>
+                            <li><input type="checkbox">手機充電器</li>
+                            <li><input type="checkbox">4孔以上延長線</li>
+                            <li><input type="checkbox">滑鼠、鍵盤</li>
+                            <li><input type="checkbox">螢幕 (三爽的32:9宿舍剛好塞的下)</li>
+                            <li><input type="checkbox">耳機</li>
+                            <li><input type="checkbox">麥克風</li>
+                            <li><input type="checkbox">RJ45(網路線)轉USB轉接器(如果你電腦不能插網路線的話)</li>
+                            <li><input type="checkbox">隨身碟</li>
+                        </ul>
+                        <li>工具（這些東西每個學長當初都有帶，沒跟你虎洨的，沒帶的現在都已經轉學了）</li>
+                        <ul>
+                            <li><input type="checkbox">全尺寸螺絲起子</li>
+                            <li><input type="checkbox">電器膠布</li>
+                            <li><input type="checkbox">板手</li>
+                            <li><input type="checkbox">斜口鉗</li>
+                            <li><input type="checkbox">老虎鉗</li>
+                            <li><input type="checkbox">烙鐵</li>
+                            <li><input type="checkbox">WD-40</li>
+                            <li><input type="checkbox">萬用膠</li>
+                            <li><input type="checkbox">小刀</li>
+                            <li><input type="checkbox">機車+第二頂安全帽</li>
+                            <li><input type="checkbox">可以刷爆的信用卡</li>
+                        </ul>
+                        <li>其他</li>
+                        <ul>
+                            <li><input type="checkbox">身分證、健保卡、駕照</li>
+                            <li><input type="checkbox">提款卡</li>
+                            <li><input type="checkbox">大頭照(2吋證件照至少一張，健康檢查用)</li>
+                            <li><input type="checkbox">寢具的單子(如果有買的話)</li>
+                            <li><input type="checkbox">其他重要的表單</li>
+                            
+                        </ul>
+                        <li>關於醫療箱</li>
+                        <ul>
+                            <p>有鑑於大二學長在開學第一個禮拜就在校內騎腳踏車雷殘，所以加這個&nbsp<em>iftnt</em></p>
+                            <li><input type="checkbox">小護士</li>
+                            <li><input type="checkbox">紗布</li>
+                            <li><input type="checkbox">碘酒</li>
+                            <li><input type="checkbox">防蚊液</li>
+                            <li><input type="checkbox">OK繃</li>
+                        </ul>
+                </div>
+                <div class="GirlBring">
+                    <h3 class="btnGirl"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6%"
+                        viewBox="0 0 419.692 419.692" style="enable-background:new 0 0 419.692 419.692;" xml:space="preserve">
+                       <path style="fill:#E4187A;" d="M363.081,153.23h-40c0,62.44-50.8,113.23-113.23,113.23c-62.44,0-113.24-50.79-113.24-113.23h-40
+                           c0,77.711,58.154,142.093,133.235,151.924v38.152h-36.568v40h36.568v36.385h40v-36.385h36.568v-40h-36.568v-38.151
+                           C304.923,295.328,363.081,230.944,363.081,153.23z"/>
+                       <path style="fill:#ED539D;" d="M209.851,40c62.43,0,113.23,50.79,113.23,113.23h40C363.081,68.74,294.341,0,209.851,0
+                           c-84.5,0-153.24,68.74-153.24,153.23h40C96.611,90.79,147.411,40,209.851,40z"/>
+                   </svg>&nbsp女</h3>
+                    <ul class="toggleGirl" style="list-style: none;margin-left: -9%;">
+                        <li>日常生活</li>
+                        <ul>
+                            <li><input type="checkbox">碗</li>
+                            <li><input type="checkbox">拖鞋</li>
+                            <li><input type="checkbox">抹布</li>
+                            <li><input type="checkbox">電風扇</li>
+                            <li><input type="checkbox">快想到了，等我一下</li>
+                            <li><input type="checkbox">簡易型急救包</li>
+                            <li><input type="checkbox">垃圾桶</li>
+                            <li><input type="checkbox">洗衣籃</li>
+                            <li><input type="checkbox">一個耐背的背包</li>
+                            <li><input type="checkbox">衣物</li>
+                            <li><input type="checkbox">臉盆</li>
+                            <li><input type="checkbox">水壺</li>
+                        </ul>
+                        <li>文書(讀書)用具</li>
+                        <ul>
+                            <li><input type="checkbox">膠帶、膠水</li>
+                            <li><input type="checkbox">剪刀、美工刀</li>
+                            <li><input type="checkbox">各種筆</li>
+                            <li><input type="checkbox">一疊A4(較推)或是一本計算紙(微積分和離散數學會用到)</li>
+                        </ul>
+                        <li>盥洗用具</li>
+                        <ul>
+                            <li><input type="checkbox">吹風機</li>
+                            <li><input type="checkbox">沐浴乳</li>
+                            <li><input type="checkbox">洗髮乳</li>
+                            <li><input type="checkbox">其他會用到的清潔用品</li>
+                            <li><input type="checkbox">牙刷牙膏漱口杯</li>
+                            <li><input type="checkbox">毛巾、浴巾</li>
+                        </ul>
+                        <li>3C用品</li>
+                        <ul>
+                            <li><input type="checkbox">筆電或桌電</li>
+                            <li><input type="checkbox">筆電的充電器</li>
+                            <li><input type="checkbox">手機充電器</li>
+                            <li><input type="checkbox">4孔以上延長線</li>
+                            <li><input type="checkbox">滑鼠、鍵盤</li>
+                            <li><input type="checkbox">螢幕</li>
+                            <li><input type="checkbox">耳機</li>
+                            <li><input type="checkbox">麥克風</li>
+                            <li><input type="checkbox">RJ45(網路線)轉USB轉接器 (如果你筆電不能插網路線的話)</li>
+                            <li><input type="checkbox">隨身碟</li>
+                        </ul>
+                        <li>工具</li>
+                        <ul>
+                            <li><input type="checkbox"><em>叫男生帶</em></li>
+                        </ul>
+                        <li>其他</li>
+                        <ul>
+                            <li><input type="checkbox">身分證、健保卡、駕照</li>
+                            <li><input type="checkbox">提款卡</li>
+                            <li><input type="checkbox">大頭照</li>
+                            <li><input type="checkbox">寢具的單子(如果有買的話)</li>
+                            <li><input type="checkbox">其他重要的表單</li>
+                </div>
+                <div class="clear"></div>
+            
             </div>
         </div>
-        <table class="graduate" border="1">
-                <tr>
-                    <th></th>
-                    <th> 學一 </th>
-                    <th> 學二 </th>
-                    <th> 綜宿 </th>
-                </tr>
-                <tr>
-                    <td> 室內空間 </td>
-                    <td> 大 </td>
-                    <td> 中 </td>
-                    <td> 小 </td>
-                </tr>
-                <tr>
-                    <td> 浴室 </td>
-                    <td> 一馬桶一浴室 </td>
-                    <td> 兩馬桶一浴室 </td>
-                    <td> 一馬桶一浴室 </td>
-                </tr>
-                <tr>
-                    <td> 床 </td>
-                    <td> 爬梯式 </td>
-                    <td> 階梯式 </td>
-                    <td> 爬梯式 </td>
-                </tr>
-                <tr>
-                    <td> 老舊 </td>
-                    <td> 中 </td>
-                    <td> 新 </td>
-                    <td> 舊 </td>
-                </tr>
-                <tr>
-                    <td> 內配 </td>
-                    <td> 基本家具+鐵櫃 </td>
-                    <td> 基本家具白色木製 </td>
-                    <td> 基本家具鐵製無陽台</td>
-                </tr>
-                <tr>
-                    <td> 隔音 </td>
-                    <td> 普通 </td>
-                    <td> 佳 </td>
-                    <td> 爛 </td>
-                </tr>
-                <tr>
-                    <td> 通風 </td>
-                    <td> 佳 </td>
-                    <td> 佳 </td>
-                    <td> 差 </td>
-                </tr>
-                <tr>
-                    <td> 公共空間 </td>
-                    <td> 1個交誼廳 </td>
-                    <td> 10個交誼廳<br>K中<br>閱覽室<br>宿舍辦公室</td>
-                    <td> 每樓1個交誼廳 </td>
-                </tr>
-                <tr>
-                    <td> 電信訊號 </td>
-                    <td> 尚可 </td>
-                    <td> 免強 </td>
-                    <td> 較好 </td>
-                </tr>
-                <tr>
-                    <td> 費用 </td>
-                    <td> 7550 </td>
-                    <td> 9800 </td>
-                    <td> 7250 </td>
-                </tr>
-                <tr>
-                    <td> 照片 </td>
-                    <td><img src="img/photo1.png" alt=""></td>
-                    <td><img src="img/photo2.png" alt=""></td>
-                    <td><img src="img/photo3.png" alt=""></td>
-                </tr>
-                </table>
+        
         </div>
     </div>
 </body>
-</html>
+</html> 

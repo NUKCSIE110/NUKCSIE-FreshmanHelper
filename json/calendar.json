@@ -1,50 +1,26 @@
 [
     {
-        "title": "學校資訊系統帳號密碼使用說明",
-        "start": "不限",
-        "end":"",
-        "description":"",
-        "ps":"網路通訊組 07-5919482",
-        "url":"https://www.nuk.edu.tw/files/11-1000-1237.php?Lang=zh-tw"
-    },
-    {
-        "title": "入學通知單",
-        "start": "2018-08-08",
-        "end": "2018-08-10",
-        "description":"各學制新生之入學通知將自107.08.08(三)-107.08.10(五)起陸續寄發，轉學生於報到時發給註冊須知",
-        "ps":"註冊組07-5919040",
-        "url":""
-    },
-    {
         "title": "申請宿舍/查詢申請結果",
         "start": "2018-08-11",
-        "end": "2018-08-18",
-        "description":"點選學務系統，並以學號及身分證字號(皆為小寫)登入，再點選「學生住宿管理系統」。申請前請詳閱住宿契約及生活公約。 若申請之宿舍棟別無法點選，表示該棟已額滿，請點選別棟。",
-        "ps":"宿舍環境:學二>學一>>>>綜宿(個人推薦學二，環境、隔音都比其他好上不少)    生輔組:07-5919596、5919597、5919061",
-        "url":"校內住宿相關規定(學務系統):http://www.sa.nuk.edu.tw/02life/life061.asp 學務管理系統:https://stu.nuk.edu.tw/start/login.asp"
+        "end": "2018-08-17",
+        "description":"宿舍環境:學二>學一>>>>綜宿(個人推薦學二，環境、隔音都比其他好上不少)    生輔組:07-5919596、5919597、5919061",
+        "ps":"",
+        "url":"http://www.sa.nuk.edu.tw/02life/life061.asp"
     },
     {
         "title": "進住宿舍",
-        "start": "2018-09-08:學一、學二 2018-09-09:綜宿",
+        "start": "2018-09-08",
         "end": "2018-09-09",
-        "description":"搬宿舍啦，流程1.檢查身分證件2.繳交資料：「入帳申請表及個人銀行（或郵局）帳號影本」(學務管理系統→學生入帳申請系統)3.領取學生證及鑰匙4.新生住宿包裹領取",
-        "ps":"生輔組07-5919596、5919597、5919061",
-        "url":"https://www.nuk.edu.tw/files/11-1000-1210.php?Lang=zh-tw 學一學二路線圖:https://www.nuk.edu.tw/ezfiles/0/1000/img/147/dorm01.png 綜宿路線圖:https://www.nuk.edu.tw/ezfiles/0/1000/img/147/dorm02.png"
-    },
-    {
-        "title": "查詢課程學分說明",
-        "start": "2018-08-01",
-        "end": "",
-        "description":"注意學分要求和上下學期之要求",
-        "ps":"課務組07-5919037",
-        "url":"https://www.nuk.edu.tw/files/11-1000-1214.php?Lang=zh-tw"
+        "description":"生輔組07-5919596、5919597、5919061 2018-09-08:學一、學二 2018-09-09:綜宿",
+        "ps":"",
+        "url":"https://www.nuk.edu.tw/files/11-1000-1210.php?Lang=zh-tw"
     },
     {
         "title": "查詢選課說明",
         "start": "2018-08-01",
         "end": "",
-        "description":"第一階段初選2018-09-03-9.~2018-09-08-12.，第二階段初選2018-09-10-12.~2018-09-14-12. 一、二階段是系統分發，照年級由高到低對機率加乘，通識沒上別氣餒還有加退選可以用搶的(比手速跟網速)，系必修記得要選",
-        "ps":"高大通識交流平台:https://www.facebook.com/groups/381082565295519/ 課務組07-5919037",
+        "description":"高大通識交流平台:https://www.facebook.com/groups/381082565295519/ 課務組07-5919037",
+        "ps":"",
         "url":"https://www.nuk.edu.tw/files/11-1000-1215.php?Lang=zh-tw"
     },
     {
@@ -59,22 +35,54 @@
         "title": "繳交學雜費",
         "start": "2018-08-29",
         "end": "2018-09-17",
-        "description":"合法搶錢?",
-        "ps":"出納組07-5919095",
+        "description":"出納組07-5919095",
+        "ps":"",
         "url":"https://www.nuk.edu.tw/files/11-1000-1201.php?Lang=zh-tw"
     },{
-        "title": "選課開跑",
-        "start": "2018-08-13",
-        "end": "2018-09-17",
-        "description":"第一階段初選2018-09-03-9.~2018-09-08-12.，第二階段初選2018-09-10-12.~2018-09-14-12. 一、二階段是系統分發，照年級由高到低對機率加乘，通識沒上別氣餒還有加退選可以用搶的(比手速跟網速)，系必修記得要選",
-        "ps":"高大通識交流平台:https://www.facebook.com/groups/381082565295519/ 課務組:07-5919037、5199564",
-        "url":"https://www.nuk.edu.tw/files/11-1000-1199.php?Lang=zh-tw"
-    },{
-        "title": "新生週課程表",
-        "start": "2018-08-13",
-        "end": "2018-09-17",
-        "description":"記得填",
+        "title": "第一階段選課開跑",
+        "start": "2018-09-03",
+        "end": "2018-09-07",
+        "description":"課務組:07-5919037、5199564",
         "ps":"",
-        "url":"各系新生周課表:https://reurl.cc/k55Kd 全校新生周課表:https://reurl.cc/lLLKd 學校提供之網址:http://www.sa.nuk.edu.tw/00main/main41.asp"
+        "url":"https://course.nuk.edu.tw/Sel/%E9%81%B8%E8%AA%B2%E9%A0%88%E7%9F%A5.htm"
+    },
+    {
+        "title": "新生週課程",
+        "start": "2018-09-08",
+        "end": "2018-09-12",
+        "description":"記得來",
+        "ps":"",
+        "url":"https://reurl.cc/k55Kd"
+    },
+    {
+        "title": "入學典禮",
+        "start": "2018-09-10",
+        "end": "2018-09-10",
+        "description":"記得來",
+        "ps":""
+    },
+    {
+        "title": "健康檢查",
+        "start": "2018-09-10",
+        "end": "2018-09-12",
+        "description":"圖書資訊館2F室內大廳",
+        "ps":"",
+        "url":"http://www.sa.nuk.edu.tw/05health/health061_1.asp"
+    },
+    {
+        "title": "第二階段選課",
+        "start": "2018-09-10",
+        "end": "2018-09-14",
+        "description":"不用搶，慢慢來",
+        "ps":"",
+        "url":"https://course.nuk.edu.tw/Sel/%E9%81%B8%E8%AA%B2%E9%A0%88%E7%9F%A5.htm"
+    },
+    {
+        "title": "加退選",
+        "start": "2018-09-17",
+        "end": "2018-09-27",
+        "description":"不用搶，慢慢來",
+        "ps":"",
+        "url":"https://course.nuk.edu.tw/Sel/%E9%81%B8%E8%AA%B2%E9%A0%88%E7%9F%A5.htm"
     }
   ]

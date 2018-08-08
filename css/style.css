@@ -373,6 +373,30 @@ em{
     border-bottom: 2px solid #5fb1fd;
     box-sizing: border-box;
 }
+.BoyBring{
+    float: left;
+    width: 42%;
+    margin: 0 10px;
+    padding: 0 15px;
+    border: 1px solid #000;
+}
+.btnBoy{
+    padding: 4px 4px;
+}
+.GirlBring{
+    float: left;
+    width: 42%;
+    margin: 0 10px;
+    padding: 0 15px;
+    border: 1px solid #000;
+}
+.btnGirl{
+    padding: 4px 4px;
+}
+.BoyBring .toggleBoy em , .GirlBring .toggleGirl em{
+    text-decoration: line-through;
+}
+
 @media(max-width:767px){
     .meal-info table tr td:nth-child(2){
         display: none;
