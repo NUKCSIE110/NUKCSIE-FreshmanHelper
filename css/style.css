@@ -227,11 +227,11 @@ th, td {
     
 }
 .graduate tr:hover{
-    background-color: #e0e0e0;
+    background-color: #e7e7e7;
     transition: 0.2s;
 }
 .meal-info tr:hover{
-    background-color: #e0e0e0;
+    background-color: #e7e7e7;
     transition: 0.2s;
 }
 em{
@@ -362,6 +362,16 @@ em{
 }
 .Dormitory img{
     width: 80%;
+}
+.light-blue-link *{
+    color: #2395ff;
+    border-bottom: 2px solid #ffffff;
+}
+.light-blue-link:hover *{
+    color: #5fb1fd;
+    transition: 0.5s;
+    border-bottom: 2px solid #5fb1fd;
+    box-sizing: border-box;
 }
 @media(max-width:767px){
     .meal-info table tr td:nth-child(2){
