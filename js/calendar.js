@@ -2,7 +2,7 @@
 $(function() {
 var data;
 var xhr = new XMLHttpRequest();
-xhr.open('get', 'http://code.csie.nuk.edu.tw/freshman/json/calendar.json');
+xhr.open('get', 'https://freshman.csie.nuk.edu.tw/json/calendar.json');
 xhr.send();
 
   xhr.onload = function() {
