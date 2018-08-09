@@ -1,6 +1,6 @@
 var list;
 var data = new XMLHttpRequest();
-data.open('get', 'http://code.csie.nuk.edu.tw/freshman/json/senior.json');
+data.open('get', 'https://freshman.csie.nuk.edu.tw/json/senior.json');
 data.send();
 data.onload = function () {
     list = JSON.parse(data.responseText);
