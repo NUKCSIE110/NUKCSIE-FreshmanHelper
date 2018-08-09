@@ -407,4 +407,14 @@ em{
 .chatroom{
     width: 100%;
 }
+.BoyBring{
+    clear: both;
+    width: 85%;
+    transition: 0.4s;
+}
+.GirlBring{
+    clear: both;
+    width: 85%;
+    transition: 0.4s;
+}
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高大資工新生資訊系統</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script>
+            $(document).ready(function () {
+                $('.chat-header').click(function () {
+                    if ($('.chatroom').hasClass('hide-chat')) {
+                        $('.chatroom').removeClass('hide-chat');
+                        $('.chatroom').addClass('show-chat');
+                    }
+                    else {
+                        $('.chatroom').addClass('hide-chat');
+                        $('.chatroom').removeClass('show-chat');
+                    }
+                    //$('#messagesDiv').toggle();
+                    //$('#nameInput').toggle();
+                    //$('#messageInput').toggle();
+                });
+            });
+    
+        </script>
+        <script src="js/Bring.js"></script>
+    <style>
+        a{
+            color: rgb(109, 109, 109);
+        }
+    </style>
+</head>
+<body>
+    <div class="chatroom hide-chat">
+        <div class="chat-header"><h3>聊天室</h3></div>
+        <div id="messagesDiv">Loading...<div><strong>rgerg: </strong>ger</div><div><strong>rgerg: </strong>g</div><div><strong>rgerg: </strong>er</div><div><strong>rgerg: </strong>ge</div><div><strong>rgerg: </strong>rg</div><div><strong>rtg: </strong>rtgrt</div><div><strong>thyyth: </strong>tyhty</div><div><strong>thyyth: </strong>thtyh</div><div><strong>kyuuk: </strong>uykyuk</div><div><strong>thyyth: </strong>gfdh</div><div><strong>grsed: </strong>rdsgd</div><div><strong>BR: </strong>哭哭</div><div><strong>KB: </strong>==</div><div><strong>yee: </strong>這樣也太亂= =</div><div><strong>集集: </strong>副集集</div><div><strong>LuLaLa: </strong> BaNa</div><div><strong>吃五根: </strong>香蕉</div><div><strong>憶起吃: </strong>大便</div><div><strong>Kix: </strong>花惹發</div><div><strong>Kix: </strong>哭哭</div><div><strong>Kix: </strong>不見了</div><div><strong>Kix: </strong>好想吃仙女</div><div><strong>Kix: </strong>不過上次吃完大爆拉</div><div><strong>Kix: </strong>嘿嘿</div><div><strong>測試: </strong>還活著</div><div><strong>Kix: </strong>好爽</div><div><strong>圖好看: </strong>這個圖都是在哪裡抓的阿?</div><div><strong>Bot: </strong>https://www.flaticon.com/</div><div><strong>Bot: </strong>部分是PS合成的</div><div><strong>抓漏達人: </strong>來找bug瞜</div><div><strong>找bug可以: </strong>但可以先交作業嗎? 我也想找bug</div><div><strong>河內塔: </strong>河內塔塔塔塔塔塔</div><div><strong>嗨: </strong>嗨嗨嗨嗨嗨</div><div><strong>QQ: </strong>Q</div><div><strong>0 0 : </strong>hi</div><div><strong>Bot: </strong>HI</div><div><strong>212: </strong>好睡</div><div><strong>hbjk: </strong>gn</div><div><strong>ewrtj: </strong>dfgh</div><div><strong>ewrtj: </strong>trtn</div><div><strong>ewrtj: </strong>rtr</div><div><strong>ewrtj: </strong>trt</div><div><strong>ewrtj: </strong>rt</div><div><strong>ewrtj: </strong>rt</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>rt</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>tr</div><div><strong>ewrtj: </strong>t</div><div><strong>ewrtj: </strong>r</div><div><strong>ewrtj: </strong>trtrt</div><div><strong>高大村的大傻子: </strong>發我發現我破不了河內塔</div><div><strong>高大村的二傻子: </strong>樓上比猩球崛起的猴子還低能</div><div><strong>test: </strong>jrjfi</div><div><strong>123: </strong>123</div><div><strong>admin: </strong>hi</div><div><strong>123: </strong>123</div><div><strong>: </strong>33</div><div><strong>: </strong>3====D</div><div><strong>: </strong>()8=====D</div><div><strong>: </strong>3O=====D</div><div><strong>ㄠ: </strong>ㄘ</div><div><strong>哈哈哈: </strong>哈哈哈</div><div><strong>ff: </strong>ffffffffffff</div><div><strong>hi: </strong>123</div><div><strong>hello: </strong>1234</div><div><strong>高大村的二傻子: </strong>1</div><div><strong>&lt;a href="#"&gt;哈&lt;/a&gt;: </strong>123</div></div>
+        <div class="textbox">
+            <input type="text" id="nameInput" placeholder="暱稱">
+            <input type="text" id="messageInput" placeholder="訊息(按Enter送出)">
+        </div>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAS7FClisBODADJgCpLSf67P4Wgv3szcTg",
+                authDomain: "chatroom-5b1d0.firebaseapp.com",
+                databaseURL: "https://chatroom-5b1d0.firebaseio.com",
+                projectId: "chatroom-5b1d0",
+                storageBucket: "",
+                messagingSenderId: "336744192990"
+            };
+            firebase.initializeApp(config);
+            var database = firebase.database().ref();
+            //var myDataRef = new firebase('https://chatroom-5b1d0.firebaseio.com');
+            $('#messageInput').keypress(function (e) {
+                if (e.keyCode == 13) {
+                    var name = $('#nameInput').val();
+                    var text = $('#messageInput').val();
+                    database.push({ name: name, text: text });
+                    $('#messageInput').val('');
+                }
+            });
+            database.on('child_added', function (snapshot) {
+                var message = snapshot.val();
+                displayChatMessage(message.name, message.text);
+            });
+            function displayChatMessage(name, text) {
+                $('<div/>').text(text).prepend($('<strong/>').text(name + ': ')).appendTo($('#messagesDiv'));
+                $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+            };
+        </script>
+    </div>
+    <a href="/">
+    <div class="nav">
+        <img class="logo" src="logo.png" alt="">
+        <h1>迎新宿營</h1>
+    </div>
+    </a>
+    <div class="wrap">
+        <div class="content">
+            <audio controls="controls" loop="loop" autoplay="autoplay" hidden="hidden"src="ToBeContinuedSong.mp3"></audio>
+            <h2 style="text-align: center;">2018.10.4 ~ 2018.10.6<br><br>震撼登場<br><br></h2>
+            <img src="ToBeContinued.png" alt="" style="width: 75%;margin: 0 10%;">
+        </div>
+    </div>
+</body>
+</html>
