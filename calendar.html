@@ -17,24 +17,7 @@
     <script src='js/calendar_zh-tw.js'></script>
     <script src="js/calendar.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.chat-header').click(function () {
-                if ($('.chatroom').hasClass('hide-chat')) {
-                    $('.chatroom').removeClass('hide-chat');
-                    $('.chatroom').addClass('show-chat');
-                }
-                else {
-                    $('.chatroom').addClass('hide-chat');
-                    $('.chatroom').removeClass('show-chat');
-                }
-                //$('#messagesDiv').toggle();
-                //$('#nameInput').toggle();
-                //$('#messageInput').toggle();
-            });
-        });
-
-    </script>
+    
 <style>
     .hide-chat{
     margin-bottom: -440px;
@@ -62,6 +45,9 @@ a {
     
     <div class="wrap">
         <div id='calendar' ></div>
+    </div>
+    <div class="footer wrap-nocolor">
+        <p>Web Desinger : kaibaooo、iftnt、ktony</p>
     </div>
 </body>
 
