@@ -14,7 +14,7 @@ function find() {
   if (re.test(id)) {
     for (let i = 0; i < list.length; i++) {
       if (year == 6 && list[i].schoolid == 'A10755' + freshman) {
-        document.querySelector('.response div h3').textContent = list[i].name;
+        document.querySelector('.response div h3').textContent = list[i].senior;
         document.querySelector('.response').style.visibility = 'visible';
         found = true;
         break;
