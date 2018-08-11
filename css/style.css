@@ -377,8 +377,8 @@ em{
 }
 .BoyBring{
     float: left;
-    width: 42%;
-    margin: 0 10px;
+    width: 40%;
+    margin: 5px 10px;
     padding: 0 15px;
     border: 1px solid #000;
 }
@@ -387,8 +387,8 @@ em{
 }
 .GirlBring{
     float: left;
-    width: 42%;
-    margin: 0 10px;
+    width: 40%;
+    margin: 5px 10px;
     padding: 0 15px;
     border: 1px solid #000;
 }
