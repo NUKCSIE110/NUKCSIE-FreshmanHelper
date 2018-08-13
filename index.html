@@ -8,10 +8,11 @@
     <title>高大資工新生資訊系統</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chat.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
     <script src="js/jQuery.js"></script>
-        <style>
+    <style>
         a {
             color: rgb(109, 109, 109);
         }
@@ -19,11 +20,14 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110982034-2"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-110982034-2');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110982034-2');
     </script>
 
 </head>
@@ -36,7 +40,7 @@
         </div>
     </a>
     <div class="clear"></div>
-    
+
     <div class="wrap">
         <div class="flex-content">
             <a href="calendar.html">
@@ -61,7 +65,7 @@
 
         <div class="clear"></div>
         <div class="flex-content">
-            
+
             <a href="meal.html">
                 <div class="small-block">
                     <img src="ICON/food.png" alt="">
@@ -119,30 +123,42 @@
             <a href="/job.html">
                 <div class="small-block">
                     <img src="ICON/meeting.png" alt="">
-                    <del><h2>班級幹部</h2></del>
+                    <del>
+                        <h2>班級幹部</h2>
+                    </del>
                 </div>
             </a>
             <a href="/schoolRes.html">
                 <div class="small-block">
                     <img src="ICON/box (1).png" alt="">
-                    <del><h2>學校資源</h2></del>
+                    <del>
+                        <h2>學校資源</h2>
+                    </del>
                 </div>
             </a>
             <a href="/deptRes.html">
                 <div class="small-block">
                     <img src="ICON/packing.png" alt="">
-                    <del><h2>系上資源</h2></del>
+                    <del>
+                        <h2>系上資源</h2>
+                    </del>
                 </div>
             </a>
         </div>
         <!-- Source:https://codepen.io/finnhvman/pen/gzmMaa -->
         <iframe class="honio" width="100%" height="600px" src="./honio.html"></iframe>
-    
+
     </div>
     <div class="footer wrap-nocolor">
-        <p>Web Desinger : kaibaooo、iftnt、ktony</p>
-        <p>Ver. 180813 2021</p>
-    </div>
+            <p>
+                web developed by
+                <a href="https://www.facebook.com/huangxkailun">kaibaooo (FrontEnd / RD)</a>、
+                <a href="https://www.facebook.com/KTonyk">ktony (FrontEnd / RD)</a>、
+                <a href="https://www.facebook.com/ifTNT">iftnt (BackEnd / SRE)</a>、
+                <a href="https://www.facebook.com/profile.php?id=100000113351582">lulalabana (Database)</a>
+            </p>
+            <p>Icons made by <a href="https://www.flaticon.com">Freepik</a> &nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp; web ver. 1808132222</p>
+        </div>
 
 </body>
 
