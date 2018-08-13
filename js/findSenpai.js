@@ -25,7 +25,6 @@ function find() {
         found = true;
         break;
       }
-      // console.log(list[i].schoolid.substr(6));
     }
   }
   else {
