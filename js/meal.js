@@ -60,3 +60,14 @@ function random() {
     document.querySelector('.eathis').innerHTML = restaurant;
     document.querySelector('.map').innerHTML = meal[n].map;
 }
+// var list;
+// var data = new XMLHttpRequest();
+// data.open('get', 'https://freshman.csie.nuk.edu.tw/json/meal.json');
+// data.send();
+// data.onload = function() {
+//   list = JSON.parse(data.responseText);
+// }
+// var output = '';
+// for (let i = 0; i < list.length; i++){
+
+// }
