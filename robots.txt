@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /*/includes/*
+Disallow: /*/secret/*
+Disallow: /*/youkonwme/*
+Disallow: /*/database/*
+Disallow: /*/db/*
+Disallow: /*/QQ/*
+Disallow: /*/kuku/*
+
