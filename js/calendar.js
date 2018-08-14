@@ -23,7 +23,14 @@ $(function () {
                 center: 'title',
                 right: 'month,listMonth'
             },
-            defaultView: (window.innerWidth>=420 ? 'month' : 'listMonth'),
+            defaultView: (window.innerWidth >= 440 ? 'month' : 'listMonth'),
+            locale: 'zh-tw',
+            buttonText: {
+                today: '今天',
+                month: '月份',
+                list: '清單'
+            },
+            titleFormat: 'YYYY MMMM',
             events: data
         });
     };
