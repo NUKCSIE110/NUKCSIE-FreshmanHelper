@@ -1,29 +1,33 @@
+$(function () {
+    var data;
+    var selectHeader = function(w){
+        return {
+                left: 'prev next'+(w>=390 ? ' today' : ''),
+                center: 'title',
+                right: (w>=640 ? 'month,agendaWeek,agendaDay,listMonth' : '')
+            };
+    };
 
-$(function() {
-var data;
-var xhr = new XMLHttpRequest();
-xhr.open('get', 'https://freshman.csie.nuk.edu.tw/json/calendar.json');
-xhr.send();
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', '/json/calendar.json');
+    xhr.send();
 
-  xhr.onload = function() {
-    data = JSON.parse(xhr.responseText);
-    $('#calendar').fullCalendar({
-      eventRender: function(eventObj, $el) {
-        $el.popover({
-          title: eventObj.title,
-          content: eventObj.description,
-          trigger: 'hover',
-          placement: 'top',
-          container: 'body'
+    xhr.onload = function () {
+        data = JSON.parse(xhr.responseText);
+        $('#calendar').fullCalendar({
+            eventRender: function (eventObj, $el) {
+                $el.popover({
+                    title: eventObj.title,
+                    content: eventObj.description,
+                    trigger: 'hover',
+                    placement: 'top',
+                    container: 'body'
+                });
+            },
+            themeSystem: 'bootstrap4',
+            contentHeight: 'auto',
+            header: selectHeader(window.innerWidth),
+            events: data
         });
-      },
-      themeSystem: 'bootstrap4',
-      header: {
-        left: 'prev next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay,listMonth'
-      },
-      events: data,
-    })
-  };
+    };
 });
