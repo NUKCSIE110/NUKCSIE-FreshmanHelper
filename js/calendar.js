@@ -23,7 +23,7 @@ $(function () {
                 center: 'title',
                 right: 'month,listMonth'
             },
-            defaultView: (window.innerWidth>=420 ? 'month' : 'listWeek'),
+            defaultView: (window.innerWidth>=420 ? 'month' : 'listMonth'),
             events: data
         });
     };
