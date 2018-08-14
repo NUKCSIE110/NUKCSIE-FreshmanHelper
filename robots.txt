@@ -7,3 +7,4 @@ Disallow: /*/db/*
 Disallow: /*/QQ/*
 Disallow: /*/kuku/*
 
+sitemap: https://freshman.csie.nuk.edu.tw/sitemap.xml
