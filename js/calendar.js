@@ -1,13 +1,5 @@
 $(function () {
     var data;
-    var selectHeader = function(w){
-        return {
-                left: 'prev next'+(w>=390 ? ' today' : ''),
-                center: 'title',
-                right: (w>=640 ? 'month,agendaWeek,agendaDay,listMonth' : '')
-            };
-    };
-
     var xhr = new XMLHttpRequest();
     xhr.open('get', '/json/calendar.json');
     xhr.send();
@@ -26,7 +18,12 @@ $(function () {
             },
             themeSystem: 'bootstrap4',
             contentHeight: 'auto',
-            header: selectHeader(window.innerWidth),
+            header: {
+                left: 'prev today next',
+                center: 'title',
+                right: 'month,listMonth'
+            },
+            defaultView: (window.innerWidth>=420 ? 'month' : 'listWeek'),
             events: data
         });
     };
