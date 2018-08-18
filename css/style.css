@@ -349,11 +349,61 @@ em{
     border-bottom: 1px solid #000000;
     transition: 0.5s;
 }
+.time-selector{
+    margin-top: 10px;
+    border: #b4b4b4;
+    width: 100%;
+    display: flex;
+}
+.time-selector:nth-child(odd){
+    border: 1px 0px solid #b4b4b4;
+}
+.time{
+    display: inline-flex;
+    background-color: #ffffff;
+    border: 1px solid #b4b4b4;
+    margin: 0px;
+    flex-direction: column;
+    flex-flow: column;
+    flex: 3;
+}
+.selected-time{
+    display: inline-flex;
+    background-color: #ffffff;
+    border: 1px solid #b4b4b4;
+    margin: 0px;
+    flex-direction: column;
+    flex-flow: column;
+    flex: 3;
+}
+.selected-time a{
+    padding-top: calc((30px - 1em) / 2);
+    display: block;
+    text-align: center;
+    height: 30px;
+    background-color: #b4b4b4;
+    color: #ffffff;
+}
+.selected-time a:hover{
+    background-color: #b4b4b4;
+    color: #ffffff;
+}
+.time a{
+    padding-top: calc((30px - 1em) / 2);
+    display: block;
+    text-align: center;
+    height: 30px;
+}
+.time a:hover{
+    background-color: #e7e7e7;
+    transition: 0.5s;
+}
 #hospital{
     width: 80%;
     height: 720px;
     margin-left: 10%;
 }
+
 @media(max-width:767px){
 .nav{
     position: relative;
