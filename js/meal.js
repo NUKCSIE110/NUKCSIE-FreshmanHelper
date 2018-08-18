@@ -324,41 +324,23 @@ var meal = {
         }
     ]
 };
-$(document).ready(function() {
-    $(".time").click(function(){
-        $(this).children("#time").prop("checked", true);
-        $(".time-selector").children("div").addClass("time");
-        $(".time-selector").children("div").removeClass("selected-time");
-        // $(".time").addClass("time");
-        $(this).children("#time").prop("checked",true).parent().removeClass("time");
-        $(this).children("#time").prop("checked",true).parent().addClass("selected-time");
-        
-    })
-    $(".selected-time").click(function(){
-        $(this).children("#time").prop("checked", true);
-        $(".time-selector").children("div").addClass("time");
-        $(".time-selector").children("div").removeClass("selected-time");
-        // $(".time").addClass("time");
-        $(this).children("#time").prop("checked",true).parent().removeClass("time");
-        $(this).children("#time").prop("checked",true).parent().addClass("selected-time");
-    })
-})
+
 function find(n) {
     let contents = "";
     contents += "\
     <table>\
     <tr>\
-        <th>店名</th>\
-        <th>地址</th>\
-        <th>地圖</th>\
+        <td><strong>店名</strong></td>\
+        <td><strong>地址</strong></td>\
+        <td><strong>地圖</strong></td>\
     </tr>\
     "
     for(let i = 0;i<meal[n].length;i++){
         let compileURL = meal[n][i].map;
         contents += "\
         <tr>\
-            <td>" + meal[n][i].name + "店名</td>\
-            <td>" + meal[n][i].address + "地址</td>\
+            <td>"+meal[n][i].name+"</td>\
+            <td>"+meal[n][i].address+"</td>\
             <td>\
             <div class='show-meal-map'>\
                 <a onclick='map(\""+compileURL+"\")'>\
@@ -377,10 +359,29 @@ function map(sc){
     document.querySelector('#map').src = sc;
 }
 function random() {
-    var n = Math.floor(Math.random() * 9);
-    var restaurant = '';
-    var carry = '';
-    restaurant = '<tr><td>' + meal[n].name + '</td></tr>';
-    document.querySelector('.eathis').innerHTML = restaurant;
-    document.querySelector('.map').innerHTML = meal[n].map;
+    var n = Math.floor(Math.random() * meal.normal.length);
+    map(meal.normal[n].map);
 }
+
+
+
+$(document).ready(function() {
+    $(".time").click(function(){
+        $(this).children("#time").prop("checked", true);
+        $(".time-selector").children("div").addClass("time");
+        $(".time-selector").children("div").removeClass("selected-time");
+        // $(".time").addClass("time");
+        $(this).children("#time").prop("checked",true).parent().removeClass("time");
+        $(this).children("#time").prop("checked",true).parent().addClass("selected-time");
+        
+    });
+    $(".selected-time").click(function(){
+        $(this).children("#time").prop("checked", true);
+        $(".time-selector").children("div").addClass("time");
+        $(".time-selector").children("div").removeClass("selected-time");
+        // $(".time").addClass("time");
+        $(this).children("#time").prop("checked",true).parent().removeClass("time");
+        $(this).children("#time").prop("checked",true).parent().addClass("selected-time");
+    });
+    find('breakfast');
+})

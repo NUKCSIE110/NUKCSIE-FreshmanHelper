@@ -199,7 +199,7 @@ th, td {
     background-color: #43a4ff;
     border-radius: 10px;
     color: #ffffff;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     cursor: pointer;
     height: 25px;
@@ -211,10 +211,12 @@ th, td {
 }
 .meal-info table{
     width: 90%;
-    text-align: center;
     margin: 0 auto;
     border-spacing: 0px;
-    
+    text-align: left;
+}
+.meal-info table tbody td:nth-child(3){
+    text-align: center;
 }
 .meal-info table tr td:nth-child(1){
     text-align: left;
@@ -335,6 +337,9 @@ em{
 }
 .BoyBring .toggleBoy em , .GirlBring .toggleGirl em{
     text-decoration: line-through;
+}
+.eatwhat{
+    cursor: pointer;
 }
 .footer{
     font-size: 10px;
