@@ -383,6 +383,7 @@ em{
     height: 30px;
     background-color: #b4b4b4;
     color: #ffffff;
+    cursor: pointer;
 }
 .selected-time a:hover{
     background-color: #b4b4b4;
@@ -393,6 +394,7 @@ em{
     display: block;
     text-align: center;
     height: 30px;
+    cursor: pointer;
 }
 .time a:hover{
     background-color: #e7e7e7;

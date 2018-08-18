@@ -43,15 +43,21 @@
         <div class="time-selector">
             <div class="selected-time">
                 <a onclick="find('breakfast')">早餐</a>
+                <input type="radio" checked='true' name="time" id="time" hidden>
             </div>
             <div class="time">
-                <a href="">正餐</a>
+                <a onclick="find('normal')">正餐</a>
+                <input type="radio" name="time" id="time" hidden>
             </div>
             <div class="time">
-                <a href="">消夜</a>
+                <a onclick="find('midnight')">消夜</a>
+                <input type="radio" name="time" id="time" hidden>
+            </div>
+            <div class="time">
+                <a onclick="find('drink')">消夜</a>
+                <input type="radio" name="time" id="time" hidden>
             </div>
         </div>
-        <h5><em>註:</em>因為技術問題，這個頁面還沒完成，絕對不止這些好吃喔!!</h5>
         <div class="meal-info">
             <table>
                 <tr>

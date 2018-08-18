@@ -324,7 +324,25 @@ var meal = {
         }
     ]
 };
-
+$(document).ready(function() {
+    $(".time").click(function(){
+        $(this).children("#time").prop("checked", true);
+        $(".time-selector").children("div").addClass("time");
+        $(".time-selector").children("div").removeClass("selected-time");
+        // $(".time").addClass("time");
+        $(this).children("#time").prop("checked",true).parent().removeClass("time");
+        $(this).children("#time").prop("checked",true).parent().addClass("selected-time");
+        
+    })
+    $(".selected-time").click(function(){
+        $(this).children("#time").prop("checked", true);
+        $(".time-selector").children("div").addClass("time");
+        $(".time-selector").children("div").removeClass("selected-time");
+        // $(".time").addClass("time");
+        $(this).children("#time").prop("checked",true).parent().removeClass("time");
+        $(this).children("#time").prop("checked",true).parent().addClass("selected-time");
+    })
+})
 function find(n) {
     let contents = "";
     contents += "\
@@ -336,22 +354,23 @@ function find(n) {
     </tr>\
     "
     for(let i = 0;i<meal[n].length;i++){
-        contents += '\
+        let compileURL = meal[n][i].map;
+        contents += "\
         <tr>\
-            <td>' + meal[n][i].name + '店名</td>\
-            <td>' + meal[n][i].address + '地址</td>\
+            <td>" + meal[n][i].name + "店名</td>\
+            <td>" + meal[n][i].address + "地址</td>\
             <td>\
-            <div class="show-meal-map">\
-                <a onclick="map("'+meal[n][i].map+'")">\
-                    <i class="fas fa-map-marked-alt"></i>\
+            <div class='show-meal-map'>\
+                <a onclick='map(\""+compileURL+"\")'>\
+                    <i class='fas fa-map-marked-alt'></i>\
                 </a>\
             </div>\
             </td>\
         </tr>\
-        '
+        "
     }
     contents += '</table>'
-    console.log(contents);
+    // console.log(contents);
     document.querySelector('.meal-info').innerHTML = contents;
 }
 function map(sc){
